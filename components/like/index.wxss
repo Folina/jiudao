@@ -1,6 +1,9 @@
 /* components/like/index.wxss */
 .container{
- 
+display: inline-flex;/*inline-flex能够取消块状，也能有flex的特性，并且宽度能够自适应*/
+flex-direction: row;
+padding: 10rpx;
+
 }
 .container image{
   width: 32rpx;
@@ -8,7 +11,13 @@
 
 }
 
+
 .container text{
   font-size: 24rpx;
+  line-height: 24rpx;/*消除间距*/
   color: #dddddd;
+
+  position: relative;/*为了能够让数字漂浮在右上角*/
+  bottom: 10rpx; /*能够在让数字显示完整，不然就会截断*/
+  left: 6rpx;
 }
