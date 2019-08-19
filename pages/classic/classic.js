@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    test:1
 
   },
 
@@ -12,7 +13,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(this.data.test)
+      wx.request({
+        url: 'http://bl.7yue.pro/v1/classic/latest',
+        header:{
+          appkey:"KOLDaSADSDLWWbF",
+        },
+        success:(res)=>{
+          console.log(this.data.test)
+        }
+      })
   },
 
   /**

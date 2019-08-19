@@ -1,5 +1,9 @@
 /* components/like/index.wxss */
 .container{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  
  
 }
 .container image{
@@ -10,5 +14,10 @@
 
 .container text{
   font-size: 24rpx;
+  line-height: 24rpx;/*消除间距，来使数字往上偏移*/
   color: #dddddd;
+  position: relative;/*控制方向*/
+  bottom: 10rpx;/*向上*/
+  left: 6rpx;/*向左偏移*/
+
 }
