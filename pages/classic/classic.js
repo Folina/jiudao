@@ -1,5 +1,5 @@
-import {HTTP}from '../../util/http.js'
-let http =new HTTP()
+import { ClassicsModle}from '../../models/classic.js'
+let classic = new ClassicsModle()
 
 // pages/classic/classic.js
 Page({
@@ -15,21 +15,10 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  //这种就是用到promise方法来做
   onLoad: function (options) {
-    console.log(this.data.test)
-      // wx.request({
-      //   url: 'http://bl.7yue.pro/v1/classic/latest',
-      //   header:{
-      //     appkey:"KOLDaSADSDLWWbF",
-      //   },
-      http.request({
-        url:'/classic/lastest',
-      })
-
-      
-        success:(res)=>{
-          console.log(this.data.test)
-        }
+    classic.getLastest((res)=>{
+    })
       
   },
 
